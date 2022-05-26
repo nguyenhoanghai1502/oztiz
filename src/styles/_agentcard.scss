@@ -1,0 +1,88 @@
+@import './variables/colors';
+@import './variables/fonts';
+.card__container {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid $transparent-grey;
+    padding: 1rem;
+    // clip-path: circle(20% at 50% 25%);
+    transition: all .5s ease;
+    width: 20%;
+    margin: 1rem;
+    position: relative;
+    &:hover {
+        .card__img {
+            img {
+                transform: scale(1.1);
+            }
+        }
+        .card__icon {
+            i {
+                margin: 0.2rem 0;
+            }
+            .fa-facebook {
+                transform: translateX(0px);
+            }
+            .fa-skype {
+                transform: translateX(0px);
+            }
+            .fa-twitter {
+                transform: translateX(0px);
+            }
+            .fa-linkedin {
+                transform: translateX(0px);
+            }
+        }
+        // clip-path: circle(120% at 50% 50%);
+    }
+    .card__img {
+        border: 1px solid $transparent-grey;
+        border-radius: 20px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            transform: scale(1);
+            transition: all .3s ease;
+        }
+    }
+    .card__name {
+        font-size: 1.2rem;
+        font-family: $roboto-font;
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+    .card__description {
+        font-size: 1rem;
+        font-weight: lighter;
+        margin: 0;
+    }
+    .card__icon {
+        color: $blue-color;
+        display: flex;
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        flex-direction: column;
+        overflow: hidden;
+        i {
+            cursor: pointer;
+            transition: all .5s ease;
+            margin: 0.2rem 0;
+            font-size: 1.5rem;
+        }
+        .fa-facebook {
+            transform: translateX(50px);
+        }
+        .fa-skype {
+            transform: translateX(100px);
+        }
+        .fa-twitter {
+            transform: translateX(150px);
+        }
+        .fa-linkedin {
+            transform: translateX(200px);
+        }
+    }
+}

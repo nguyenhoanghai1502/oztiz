@@ -1,0 +1,39 @@
+@import './variables/colors';
+@import './variables/fonts';
+.agent__container {
+    width: 80%;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.img__container {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.counter__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+    background-image: url('../../public/assets/images/counterbg.jpg');
+    height: 15rem;
+    .counter {
+        position: relative;
+        font-size: 4rem;
+        margin: 2rem 3rem;
+        font-weight: bolder;
+        color: $blue-color;
+        &::after {
+            content: "+";
+            font-weight: bolder;
+        }
+    }
+    .counter__title {
+        font-size: 1rem;
+        text-align: center;
+        font-weight: lighter;
+        color: $blue-color;
+    }
+}

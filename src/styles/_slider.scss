@@ -1,0 +1,78 @@
+@import './variables/colors';
+@import './variables/fonts';
+.slider {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    overflow: hidden;
+    img {
+        object-position: center top;
+        width: 120%;
+    }
+}
+
+.slide {
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: all 0.5s ease;
+}
+
+.current {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.arrow {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    width: 3rem;
+    height: auto;
+    color: $white-color;
+    opacity: 0.5;
+    transition: all .3s ease;
+    cursor: pointer;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.prev {
+    left: 2rem;
+}
+
+.next {
+    right: 2rem;
+}
+
+.card {
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    width: 30rem;
+    height: auto;
+    background-color: $transparent-black;
+    padding: 3rem 2rem;
+    color: $white-color;
+    font-family: $roboto-font;
+    .name {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin: 0.2rem 0;
+        letter-spacing: 0.1rem;
+    }
+    .address {
+        font-weight: normal;
+        font-size: 1.8rem;
+        margin: 0.5rem 0;
+    }
+    .properties {
+        font-size: 1.2rem;
+        font-weight: lighter;
+    }
+    .price {
+        font-size: 2rem;
+        font-weight: normal;
+        margin: 0.5rem 0;
+    }
+}

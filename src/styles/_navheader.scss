@@ -1,0 +1,53 @@
+@import './variables/fonts';
+@import './variables/colors';
+.navbar__header {
+    background-color: $background-color;
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar__phoneNum {
+        font-family: $roboto-font;
+        font-weight: 500;
+        font-size: 1rem;
+        color: $white-color;
+    }
+    .navbar__buttons {
+        .buttons {
+            z-index: 1;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            font-family: $roboto-font;
+            border: none;
+            padding: 0.8rem 3rem;
+            background-color: $blue-color;
+            border-radius: 30px;
+            margin: 0 0.8rem;
+            font-weight: bold;
+            color: $white-color;
+            font-size: 0.9rem;
+            border: 2px solid $blue-color;
+            cursor: pointer;
+            &:hover {
+                &:after {
+                    height: 150px;
+                    opacity: 1;
+                }
+            }
+        }
+        .buttons:after {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            content: " ";
+            left: 50%;
+            top: 50%;
+            width: 150px;
+            height: 0px;
+            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+            background-color: $black-color;
+            transition: all 0.3s ease;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@import './variables/colors';
+@import './variables/fonts';
+.button__scrollTop {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    .button {
+        cursor: pointer;
+        opacity: 0;
+        border: none;
+        border-radius: 50%;
+        padding: 1rem 1.2rem;
+        background-color: $light-blue;
+        i {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: $background-color;
+        }
+    }
+    .active {
+        opacity: 1;
+    }
+}

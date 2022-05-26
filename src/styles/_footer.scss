@@ -1,0 +1,52 @@
+@import './variables/colors';
+@import './variables/fonts';
+.footer__home__container {
+    height: 70vh;
+    position: relative;
+    background-color: $background-color;
+    margin: 0;
+    &:before {
+        content: "Copyright © Hastech. All rights reserved";
+        position: absolute;
+        bottom: 0;
+        color: $white-color;
+        top: 90%;
+        display: flex;
+        align-content: center;
+        text-align: center;
+        display: block;
+        left: 0;
+        right: 0;
+        background-color: $blue-color;
+    }
+    .content__container {
+        color: $white-color;
+        font-family: $roboto-font;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        margin: 5rem;
+    }
+    .footer__about {
+        flex: 1;
+        margin: 0 auto;
+    }
+    .footer__popular {
+        flex: 1;
+        margin: 0 auto;
+    }
+    .footer__contact {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        .contact__icon {
+            display: flex;
+            align-items: center;
+            i {
+                font-size: 1.3rem;
+                margin-right: 0.5rem;
+            }
+        }
+    }
+}

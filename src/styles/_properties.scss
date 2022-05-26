@@ -1,0 +1,78 @@
+@import './variables/colors';
+@import './variables/fonts';
+.tab__container {
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.tabs {
+    display: flex;
+    .tabs__title {
+        cursor: pointer;
+        font-family: $roboto-font;
+        font-size: 2rem;
+        font-weight: bold;
+        color: $light-grey;
+        padding-right: 1rem;
+    }
+    .active-tab {
+        color: $background-color;
+    }
+}
+
+.tab__panes {
+    .tab__pane {
+        display: none;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .active-tabpane {
+        display: flex;
+    }
+}
+
+.footer__container {
+    overflow: hidden;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    .footer__left {
+        font-family: $roboto-font;
+        background-color: $background-green;
+        flex: 1;
+        text-align: center;
+        .title {
+            font-size: 3rem;
+            margin: 0;
+            color: $background-color;
+            padding-top: 2.5rem;
+            line-height: 2rem;
+        }
+        .address {
+            line-height: 1.5rem;
+        }
+        .properties {
+            margin: 0;
+        }
+        .price {
+            color: $background-color;
+            font-weight: lighter;
+        }
+    }
+    .footer__right {
+        flex: 1;
+        position: relative;
+        h2 {
+            position: absolute;
+            bottom: 0-20px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            padding: 1rem 0;
+            background-color: $blue-color;
+            color: $white-color;
+        }
+    }
+}
