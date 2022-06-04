@@ -4,33 +4,3 @@
     width: 80%;
     margin: 3rem auto;
 }
-
-.quality {
-    margin: 6rem;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    .quality__img {
-        box-shadow: 10px 12px 34px rgb(0 0 0 / 59%);
-        width: auto;
-        height: 20rem;
-        margin: 0 3rem;
-    }
-    .quality__content {
-        display: flex;
-        flex-direction: column;
-        .quality__title {
-            margin-top: 0;
-            font-family: $roboto-font;
-            line-height: 2rem;
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: $background-color;
-        }
-    }
-    .quality__icons {
-        display: flex;
-        flex-direction: row;
-    }
-}

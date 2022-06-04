@@ -5,7 +5,7 @@ import SectionTwo from './components/SectionTwo';
 import SectionProperties from './components/SectionProperties';
 import SectionAgents from './components/SectionAgents';
 import SectionBlog from './components/SectionBlog';
-import Footer from './components/Footer';
+import Footer from '../../components/Footer';
 import ScrollToTop from '../../components/ScrollToTop';
 import '../../styles/_home.scss';
 function Home() {

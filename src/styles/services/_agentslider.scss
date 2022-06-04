@@ -1,0 +1,44 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+.agent__slider {
+    display: flex;
+    width: 100%;
+    position: relative;
+    // overflow: hidden;
+    img {
+        object-position: center top;
+    }
+    .arrow {
+        z-index: 999;
+        position: absolute;
+        top: 50%;
+        width: 3rem;
+        height: auto;
+        color: $blue-color;
+        opacity: 0.5;
+        transition: all .3s ease;
+        cursor: pointer;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    .prev {
+        left: -5rem;
+    }
+    .next {
+        right: -5rem;
+    }
+    .slide {
+        display: none;
+        opacity: 0;
+        transform: translateX(-50%);
+        transition: all 0.5s ease;
+    }
+    .current {
+        transition: all 0.5s ease;
+        display: block;
+        width: 50%;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

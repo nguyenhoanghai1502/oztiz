@@ -1,6 +1,6 @@
 import React from 'react'
-import {imageData} from '../../../data/imagegallery';
-import ImageCard from '../../../components/ImageCard';
+import {imageData} from '../data/imagegallery';
+import ImageCard from './ImageCard';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

@@ -1,0 +1,58 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+.service__header {
+    margin: 3rem 0;
+    width: 80%;
+    display: flex;
+    .header__img-container {
+        width: 100%;
+        position: relative;
+        flex: 1;
+        .img__container {
+            display: flex;
+            flex-direction: column;
+            .img {
+                width: 100%;
+            }
+            position: absolute;
+            background-color :$white-color;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:5px 1px 20px $light-grey;
+        }
+        .top {
+            top: 0;
+            left: 0;
+        }
+        .bottom {
+            bottom: 0%;
+            right: -30%;
+        }
+    }
+}
+
+.service__features {
+    margin: 6rem;
+    text-align: center;
+    .service__feature-lead {
+        margin-bottom: 3rem;
+    }
+    .service__features-header {
+        color: $background-color;
+        font-size: 2rem;
+    }
+}
+
+.service__agents {
+    width: 80%;
+    margin: auto;
+    padding: 3rem;
+}
+
+.service__brands {
+    padding: 3rem 0;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
