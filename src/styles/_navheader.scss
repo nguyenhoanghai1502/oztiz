@@ -13,13 +13,14 @@
         color: $white-color;
     }
     .navbar__buttons {
+        display: flex;
         .buttons {
             z-index: 1;
             overflow: hidden;
             position: relative;
             box-sizing: border-box;
             font-family: $roboto-font;
-            border: none;
+            // border: none;
             padding: 0.8rem 3rem;
             background-color: $blue-color;
             border-radius: 30px;
@@ -29,6 +30,11 @@
             font-size: 0.9rem;
             border: 2px solid $blue-color;
             cursor: pointer;
+            a {
+                width: 100%;
+                text-decoration: none;
+                color: $white-color;
+            }
             &:hover {
                 &:after {
                     height: 150px;

@@ -1,6 +1,6 @@
 import React from 'react'
 import {useState, useEffect} from 'react';
-import '../styles/_scrolltotop.scss';
+import '../styles/components/_scrolltotop.scss';
 function ScrollToTop() {
     const [visible, setvisible] = useState(false);
     const toggleVisibility =()=>{

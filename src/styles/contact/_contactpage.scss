@@ -1,0 +1,109 @@
+    @import '../variables/colors';
+    @import '../variables/fonts';
+    .contact__container {
+        width: 80%;
+        margin: 3rem auto;
+        .contact__header {
+            padding: 6rem 0rem;
+            display: flex;
+            .contact__header__infor {
+                flex: 1;
+                margin-right: 3rem;
+                .contact__header__infor-title {
+                    .contact__title__header {
+                        color: $blue-color;
+                        font-size: 2rem;
+                        font-weight: bold;
+                        line-height: 1;
+                        padding: 0;
+                        margin: 0;
+                        h2 {
+                            font-size: 2rem;
+                            line-height: 2rem;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                    .contact__title__lead {
+                        font-size: 1rem;
+                    }
+                }
+                .contact__header__infor-contact {
+                    width: 60%;
+                    .contact__header__icon {
+                        display: flex;
+                        align-items: center;
+                        i {
+                            margin-right: 1rem;
+                        }
+                        .contact__text {}
+                    }
+                }
+            }
+            .contact__header__form {
+                flex: 1;
+                .form__title {
+                    margin-top: 0;
+                }
+                .form__input__fields {
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    .input__name__email {
+                        display: flex;
+                        justify-content: space-between;
+                        .form__input__text {
+                            width: 50%;
+                            margin-right: 2rem;
+                            padding: 0.8rem 1.5rem;
+                            border-radius: 50px;
+                            border: 1px solid $light-grey;
+                        }
+                    }
+                    .form__input__message {
+                        flex: 1;
+                        margin: 2rem 0;
+                        width: 100%;
+                        border: 1px solid #ddd;
+                        background-color: transparent;
+                        line-height: 30px;
+                        padding: 7px 20px;
+                        border-radius: 25px;
+                        color: #666666;
+                        font-size: 15px;
+                        height: auto;
+                    }
+                    .form__input__button {
+                        width: 20%;
+                        padding: 0.8rem 1rem;
+                        border-radius: 50px;
+                        background-color: $blue-color;
+                        color: $white-color;
+                        font-size: 1rem;
+                        font-weight: bold;
+                        border: none;
+                        cursor: pointer;
+                        &:after {
+                            position: absolute;
+                            opacity: 0;
+                            z-index: -1;
+                            content: " ";
+                            left: 50%;
+                            top: 50%;
+                            width: 150px;
+                            height: 0px;
+                            transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+                            background-color: $black-color;
+                            transition: all 0.3s ease;
+                        }
+                        &:hover {
+                            &:after {
+                                height: 150px;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

@@ -5,8 +5,6 @@ import '../../styles/services/_service.scss';
 import ImageGallery from '../../components/ImageGallery';
 import AgentGallery from '../../components/AgentGallery';
 import {brand} from '../../data/services/brand';
-import ScrollToTop from '../../components/ScrollToTop';
-import Footer from "../../components/Footer";
 function Services() {
   return (
     <div>
@@ -42,9 +40,6 @@ function Services() {
           </div>)
         })}
       </div>
-      <Footer/>
-      <ScrollToTop/>
-
     </div>
   )
 }

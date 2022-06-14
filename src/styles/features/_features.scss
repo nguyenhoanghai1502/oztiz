@@ -1,0 +1,53 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+.feature__header {
+    margin: 3rem auto;
+    width: 80%;
+    display: flex;
+    .feature__header__img-container {
+        width: 100%;
+        position: relative;
+        flex: 1;
+        .feature__img__container {
+            display: flex;
+            flex-direction: column;
+            .img {
+                width: 100%;
+            }
+            position: absolute;
+            background-color :$white-color;
+            text-align:center;
+            border-radius:20px;
+            box-shadow:5px 1px 20px $light-grey;
+        }
+        .top {
+            overflow: hidden;
+            top: 10%;
+            left: 0;
+            &:before {
+                content: "35% Discount";
+                position: absolute;
+                transform: rotate(-45deg);
+                background-color: $blue-color;
+                padding: 0.5rem 3rem;
+                top: 27px;
+                left: -55px;
+                box-shadow: 1px 1px 23px $light-black;
+                color: $white-color;
+                font-weight: bold;
+            }
+        }
+        .bottom {
+            bottom: 0%;
+            right: -30%;
+        }
+    }
+}
+
+.service__brands {
+    padding: 3rem 0;
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}

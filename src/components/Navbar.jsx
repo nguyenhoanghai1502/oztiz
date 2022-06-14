@@ -8,8 +8,9 @@ function Navbar() {
       <div className="navbar__header">
         <h3 className="navbar__phoneNum">Call us - 0329252477</h3>
         <div className="navbar__buttons">
-            <button className="buttons">Register</button>
-            <button className="buttons">Login</button>
+          <div className="buttons"><Link to="/register" >Register</Link></div>
+          <div className="buttons"><Link to="/login" >Login</Link></div>  
+            
         </div>
       </div>
       <div className="navbar__list">

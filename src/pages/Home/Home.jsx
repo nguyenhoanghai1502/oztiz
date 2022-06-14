@@ -1,24 +1,30 @@
-import React from 'react'
-import Slider from '../../components/Slider';
-import SectionOne from './components/SectionOne';
-import SectionTwo from './components/SectionTwo';
-import SectionProperties from './components/SectionProperties';
-import SectionAgents from './components/SectionAgents';
-import SectionBlog from './components/SectionBlog';
-import Footer from '../../components/Footer';
-import ScrollToTop from '../../components/ScrollToTop';
+import React ,{Suspense} from 'react'
 import '../../styles/_home.scss';
+const SectionOne=React.lazy(()=>import( "./components/SectionOne"));
+const SectionTwo=React.lazy(()=>import( "./components/SectionTwo"));
+const Slider=React.lazy(()=>import('../../components/Slider'));
+const SectionProperties=React.lazy(()=>import('./components/SectionProperties'));
+const SectionAgents=React.lazy(()=>import('./components/SectionAgents'));
+const SectionBlog=React.lazy(()=>import('./components/SectionBlog'))
 function Home() {
   return (
-    <div classname="home__container">      
-        <Slider/>
-        <SectionOne/>
-        <SectionTwo/>
-        <SectionProperties/>
-        <SectionAgents/>
-        <SectionBlog/>
-        <Footer/>
-        <ScrollToTop/>
+    <div classname="home__container">
+          <Slider/>            
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SectionOne/>
+        </Suspense>
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SectionTwo/>
+        </Suspense>
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SectionProperties/>
+        </Suspense>
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SectionAgents/>
+        </Suspense>
+        <Suspense fallback={<div>Loading ...</div>}>
+          <SectionBlog/>
+        </Suspense>        
     </div>
   )
 }
