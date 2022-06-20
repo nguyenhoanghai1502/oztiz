@@ -1,5 +1,9 @@
 @import './variables/colors';
 @import './variables/fonts';
+.navbar__container {
+    overflow: hidden;
+}
+
 .navbar__list {
     padding: 0rem 3rem;
     display: flex;
@@ -39,4 +43,49 @@
             }
         }
     }
+}
+
+.navbar__search__page {
+    transform: translateY(100%);
+    transition: all .5s ease;
+    position: absolute;
+    opacity: 0;
+    display: flex;
+    z-index: 2;
+    top: -100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: $white-color;
+    padding: 3rem;
+    align-items: center;
+    color: $blue-color;
+    .close {
+        cursor: pointer;
+        position: absolute;
+        top: 10%;
+        right: 10%;
+        &:before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 2rem;
+            background-color: $blue-color;
+            transform: rotate(-45deg);
+        }
+        &:after {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 2rem;
+            background-color: $blue-color;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.active__search {
+    top: 0;
+    opacity: 1;
+    transform: translateY(0);
 }

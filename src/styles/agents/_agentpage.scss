@@ -1,0 +1,9 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+.agents__page__container {
+    display: flex;
+    width: 80%;
+    margin: 6rem auto;
+    flex-wrap: wrap;
+    justify-content: center;
+}

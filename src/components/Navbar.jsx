@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom';
 import '../styles/_navheader.scss';
 import '../styles/_navbar.scss';
+import TextField from '@mui/material/TextField';
+import { color } from '@mui/system';
 function Navbar() {
+  const [search, setsearch] = useState(false);
   return (
-    <div>
+    <div className="navbar__container">
       <div className="navbar__header">
         <h3 className="navbar__phoneNum">Call us - 0329252477</h3>
         <div className="navbar__buttons">
@@ -34,10 +37,14 @@ function Navbar() {
           <li>
             <Link to="/agents">Agents</Link>
           </li>
-          <li>
-            <i class="fa-solid fa-magnifying-glass"></i>
+          <li >
+            <i onClick={()=>setsearch(!search)} class="fa-solid fa-magnifying-glass"></i>
           </li>
         </ul>
+      </div>
+      <div className={search? "navbar__search__page active__search":"navbar__search__page"}>
+        <h1 className="close" onClick={()=>setsearch(!search)}></h1>
+        <TextField fullWidth id="standard-basic" label="Search" variant="standard" color="secondary" />
       </div>
     </div>
   )

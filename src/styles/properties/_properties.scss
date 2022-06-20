@@ -1,0 +1,97 @@
+@import '../variables/colors';
+@import '../variables/fonts';
+.properties__container {
+    width: 80%;
+    margin: 6rem auto;
+    .properties__tabs {
+        list-style: none;
+        padding: 0;
+        .properties__tab {
+            cursor: pointer;
+            display: inline-block;
+            margin-right: 1rem;
+            border-radius: 50px;
+            background-color: $white-color;
+            border: 1px solid $blue-color;
+            color: $black-color;
+            padding: 0.8rem 1.5rem;
+            font-weight: bold;
+        }
+        .properties__active__tab {
+            color: $white-color;
+            background-color: $blue-color;
+        }
+    }
+    .properties__product__container {
+        display: flex;
+        .properties__tabpane {
+            flex: 5;
+            display: none;
+            .properties__product__card {
+                width: 33%;
+            }
+        }
+        .properties__active__tabpane {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .properties__title {
+            border-left: 1px solid $blue-color;
+            border-bottom: 1px solid $blue-color;
+            padding: 0.5rem;
+        }
+        .properties__right__side {
+            margin-left: 2rem;
+            flex: 2;
+            .properties__find__home {
+                .properties__find__home__dropdown {
+                    display: flex;
+                    justify-content: space-between;
+                    .dropdown {
+                        margin: 1rem 0rem;
+                    }
+                }
+                .properties__button__search {
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 50px;
+                    border: none;
+                    background-color: $blue-color;
+                    font-weight: bolder;
+                    color: $white-color;
+                    transition: all .3s ease;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: $light-black;
+                    }
+                }
+            }
+            .properties__latest {
+                margin: 2rem 0;
+            }
+            .properties__agent {
+                display: flex;
+                flex-wrap: wrap;
+                .properties__agent__cards {
+                    span {
+                        display: flex;
+                        justify-content: space-between;
+                        .properties__agent__card {
+                            box-shadow: 1px 10px 16px $light-grey;
+                            width: 50%;
+                            height: 50%;
+                            margin: 1rem;
+                            img {
+                                max-width: 100%;
+                            }
+                            .properties__agent__name {
+                                font-size: 0.8rem;
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
